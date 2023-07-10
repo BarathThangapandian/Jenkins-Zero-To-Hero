@@ -17,10 +17,5 @@ pipeline {
         sh 'node --version'
       }
     }
-    stage('Deploy spring boot aplicatio') {
-      steps {
-        sh 'docker run -d -p 9000:8080 jenkins/jenkins'
-      }
-    }
   }
 }
