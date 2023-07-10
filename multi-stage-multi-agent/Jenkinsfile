@@ -17,5 +17,13 @@ pipeline {
         sh 'node --version'
       }
     }
+    stage('Deploy spring boot aplicatio') {
+      agent {
+        docker { image '12345199354321/pet-clinic123' }
+      }
+      steps {
+        sh 'docker run -d -p 9000:8082 12345199354321/pet-clinic123'
+      }
+    }
   }
 }
